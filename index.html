@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h3>My inbox Mail (<span class="counter-mail"></span>)</h3>
+      <div class="form">
+        <input class="input-signin" type="text" value="tony@stark.fr" placeholder="Ex: tony@stark.fr" required>
+        <button class="signin-button">Signin</button>
+      </div>
+    </header>
+    <main>
+      <section id="section-one-message">
+        <button class="back-button">Back</button>
+        <div id="read-message"></div>
+      </section>
+     
+      <section id="messages"><span class="title">Inbox messages</span></section>
+      <section id="messages-sent"><span class="title">Messages sent (<span class="counter-mail-sent">0</span>)</span></section>
+      <section id="formulaire">
+        <form>
+          <label for="email">Email</label>
+          <input type="text" name="email" value="acardnicolas@gmail.com">
+          <label for="subject">Subject</label>
+          <input type="text" name="subject" value="economie">
+          <label for="message">Messages</label>
+          <textarea rows="10" name="message" id="message"></textarea>
+          <button class="submit-button" type="submit">Send Message</button>
+          <div class="alert">Vous n'avez pas rempli tous les champs</div>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="./src/app-sqlite.js"></script>
+  </body>
+</html>
